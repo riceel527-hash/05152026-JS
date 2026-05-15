@@ -1,6 +1,7 @@
 function renderBooks() {
   const booksWrapper = document.querySelector('.books');
 
+
 const books = getBooks();
 console.log(books)
 booksWrapper.innerHTML =
