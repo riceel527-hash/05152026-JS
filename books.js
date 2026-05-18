@@ -3,12 +3,13 @@ function renderBooks() {
 
 
 
-const books = getBooks();
-console.log(getBooks())
+
+
+
 booksWrapper.innerHTML =
 `<div class="book">
     <figure class="book__img--wrapper">
-      <img class="book__img" src= "${books[0].url}" alt=""> 
+      <img class="book__img" src= "assets/deep work.jpeg" alt=""> 
     </figure>
     <div class="book__title">
       Deep Work
@@ -21,7 +22,7 @@ booksWrapper.innerHTML =
 <i class="fas fa-star"></i>
     </div>
     <div class="book__price">
-      <span class="book__price--normal">$59.95</span>$14.95
+      <span class="book__price--normal">$
     </div>
   </div>`   
 }
