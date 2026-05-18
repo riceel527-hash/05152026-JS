@@ -2,8 +2,9 @@ function renderBooks() {
   const booksWrapper = document.querySelector('.books');
 
 
+
 const books = getBooks();
-console.log(books)
+console.log(getBooks())
 booksWrapper.innerHTML =
 `<div class="book">
     <figure class="book__img--wrapper">
@@ -20,7 +21,7 @@ booksWrapper.innerHTML =
 <i class="fas fa-star"></i>
     </div>
     <div class="book__price">
-      <span class="book__price--normal">$${books[0].originalPrice}</span>$${books[0].salePrice}
+      <span class="book__price--normal">$59.95</span>$14.95
     </div>
   </div>`   
 }
