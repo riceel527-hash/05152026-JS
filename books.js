@@ -16,6 +16,13 @@ else if (filter === 'RATING') {
     books.sort((a, b) => b.rating - a.rating);
   }
 
+let ratingHTML = '';
+
+for (let i = 0; i < 4; ++i) {
+  ratingHTML +=  <i class="fas fa-star"></i>
+}
+
+console.log(ratingHTML)
 
 const booksHtml = books
 .map((book) => {
@@ -28,10 +35,10 @@ const booksHtml = books
     </div>
     <div class="book__ratings">
       <i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
     </div>
     <div class="book__price">
       <span class=>$${book.originalPrice.toFixed(2)}</span>
