@@ -16,18 +16,7 @@ else if (filter === 'RATING') {
     books.sort((a, b) => b.rating - a.rating);
   }
 
-let ratingHTML = '';
-let rating = 4.5;
 
-for (let i = 0; i < Math.floor(rating); ++i) {
-  ratingHTML +=  `<i class="fas fa-star"></i>\n`
-}
-
-if (!Number.isInteger(rating)) {
-   ratingHTML +=  `<i class="fas fa-star-half-alt"></i>\n`; 
-}
-
-console.log(ratingHTML)
 
 const booksHtml = books
 .map((book) => {
@@ -39,11 +28,7 @@ const booksHtml = books
       ${book.title}
     </div>
     <div class="book__ratings">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
+    ${ratingsHTML(book.rating)}
     </div>
     <div class="book__price">
       <span class=>$${book.originalPrice.toFixed(2)}</span>
@@ -55,7 +40,21 @@ const booksHtml = books
 
 booksWrapper.innerHTML = booksHtml
 
-  
+
+function ratingsHTML(rating) {
+let ratingHTML = "";
+for (let i = 0; i < Math.floor(rating); ++i) {
+  ratingHTML +=  `<i class="fas fa-star"></i>\n`
+}
+if (!Number.isInteger(rating)) {
+   ratingHTML +=  `<i class="fas fa-star-half-alt"></i>\n`; 
+}
+return ratingHTML;
+
+}
+
+
+
 }
 
 function filterBooks(event) {
