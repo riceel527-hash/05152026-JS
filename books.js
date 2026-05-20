@@ -17,9 +17,14 @@ else if (filter === 'RATING') {
   }
 
 let ratingHTML = '';
+let rating = 4.5;
 
-for (let i = 0; i < 4; ++i) {
-  ratingHTML +=  <i class="fas fa-star"></i>
+for (let i = 0; i < Math.floor(rating); ++i) {
+  ratingHTML +=  `<i class="fas fa-star"></i>\n`
+}
+
+if (!Number.isInteger(rating)) {
+   ratingHTML +=  `<i class="fas fa-star-half-alt"></i>\n`; 
 }
 
 console.log(ratingHTML)
